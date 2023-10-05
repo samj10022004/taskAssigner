@@ -76,6 +76,7 @@ app.get('/user', async (req, res) => {
       console.error('Error fetching opportunities:', error);
       return error;
     });
+  userArray.length = 0;
   res.send(userToAssign)
   // Send a simple response
 });
