@@ -47,7 +47,7 @@ function assign(arr){
         return 'Nicolas Comin Marques';
       } else if(arr[0] === 'Nicolas Comin Marques'){
         
-        for (let i = 1; i <= arr.length-7; i++) {
+        for (let i = 1; i <= arr.length-8; i++) {
           console.log(i);
           console.log(arr[i]);
           if (arr[i] === 'Nicolas Comin Marques') {
