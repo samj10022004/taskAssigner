@@ -45,7 +45,19 @@ function assign(arr){
         }
         // All items matched up to the 2nd last item
         return 'Nicolas Comin Marques';
-      } else {
+      } else if(arr[0] === 'Nicolas Comin Marques'){
+        
+        for (let i = 1; i <= arr.length-7; i++) {
+          console.log(i);
+          console.log(arr[i]);
+          if (arr[i] === 'Nicolas Comin Marques') {
+            console.log(arr[i]);
+            continue;
+          } else {
+            return 'Nicolas Comin Marques';
+          }
+          
+        }
         return salesPerson;
       }
 
