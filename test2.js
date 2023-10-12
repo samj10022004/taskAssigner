@@ -33,7 +33,7 @@ function assign(arr){
     salesPerson = 'Ben Wright'
     if (arr[0] === salesPerson) {
         // Start comparing from the 2nd last item (index arr.length - 2)
-        for (let i = 1; i <= arr.length-4; i++) {
+        for (let i = 1; i <= arr.length-6; i++) {
           console.log(i);
           console.log(arr[i]);
           if (arr[i] === salesPerson) {
@@ -47,7 +47,7 @@ function assign(arr){
         return 'Nicolas Comin Marques';
       } else if(arr[0] === 'Nicolas Comin Marques'){
         
-        for (let i = 1; i <= arr.length-8; i++) {
+        for (let i = 1; i <= arr.length-6; i++) {
           console.log(i);
           console.log(arr[i]);
           if (arr[i] === 'Nicolas Comin Marques') {
