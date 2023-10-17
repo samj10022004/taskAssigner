@@ -29,38 +29,27 @@ var userArray = [];
 
 // funtion to calculate user to assign task and oppertunity
 function assign(arr){
-    // Check if the last item in the array is "sale"
-    salesPerson = 'Ben Wright'
-    if (arr[0] === salesPerson) {
-        // Start comparing from the 2nd last item (index arr.length - 2)
-        for (let i = 1; i <= arr.length-6; i++) {
-          console.log(i);
-          console.log(arr[i]);
-          if (arr[i] === salesPerson) {
-            console.log(arr[i]);
-            continue;
-          } else {
-            return salesPerson;
-          }
-        }
-        // All items matched up to the 2nd last item
-        return 'Nicolas Comin Marques';
-      } else if(arr[0] === 'Nicolas Comin Marques'){
-        
-        for (let i = 1; i <= arr.length-6; i++) {
-          console.log(i);
-          console.log(arr[i]);
-          if (arr[i] === 'Nicolas Comin Marques') {
-            console.log(arr[i]);
-            continue;
-          } else {
-            return 'Nicolas Comin Marques';
-          }
-          
-        }
-        return salesPerson;
-      }
+    const people = [
+        { name: 'Ben Wright', percentage: 50, target: 5 },
+        { name: 'Nicolas Comin Marques', percentage: 40, target: 4 },
+        { name: 'Vy Huynh', percentage: 10, target: 1 }
+    ]; 
 
+    // Calculate how many times each person has been assigned in the last 10 tasks
+    for (let person of people) {
+        person.assigned = arr.filter(p => p === person.name).length;
+    }
+
+    // Find the person who is under their target assignments and assign the task to them
+    for (let person of people) {
+        if (person.assigned < person.target) {
+            return person.name;
+        }
+    }
+    
+    // If everyone has been assigned according to their percentage, 
+    // you can decide the logic. Here, I am assigning to the first person.
+    return people[0].name;
 }
 
 
